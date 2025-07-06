@@ -1,13 +1,8 @@
 import React, { useContext } from 'react'
 import { MessagesContext } from '../../Context/MessagesContext'
-
+import { Trash2} from 'lucide-react';
 export default function Message({ emisor, hora, id, texto, status}) {
-    //Mostrar por consola el dato guardado en el contexto de mensajes
-    //useContext es una funcion de react que me permite usar un contexto
-    //Recibe por parametro el contexto a consumir
-    //useContext devuelve el valor del la propiedad value del contexto proveedor
-    /* const result = useContext(MessagesContext)
-    console.log(result) */
+
     const {handleEliminarMensaje} = useContext(MessagesContext)
 
     const classNames = {
@@ -24,7 +19,7 @@ export default function Message({ emisor, hora, id, texto, status}) {
                 <p className='message-text'>{texto}</p>
                 <span className="message-time">{hora}</span>
                 <span >✔✔</span>
-                <button onClick={() => {handleEliminarMensaje(id)}} >d</button> 
+                <div onClick={() => {handleEliminarMensaje(id)}}  ><Trash2 className="message-delete"></Trash2></div> 
             </span>
                 
             

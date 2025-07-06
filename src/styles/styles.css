@@ -148,7 +148,7 @@
 
 .header-icons {
   display: flex;
-  gap: 1rem; 
+  gap: 20px; 
 }
 
 .header-icon {
@@ -177,7 +177,6 @@
 
 .message-date-separator {
   display: flex;
-  
   max-width: 500px;
   height: auto;
   overflow-wrap: break-word;
@@ -185,12 +184,22 @@
   border-radius: 30px; 
   margin-top: 1rem; 
   margin-bottom: 1rem; 
-  padding-left: 20px; 
+  padding: 15px; 
 
 }
 
 .chat-dialog__my-message-color-box {
   background-color: var(--message-sent-bg);
+
+}
+
+.message-delete {
+width: 20px;
+height: 15px;
+}
+.message-delete:hover {
+color: var(--text-primary);
+border-radius:99px;
 
 }
 .message-text {
@@ -245,15 +254,16 @@
 }
 
 .message-input {
+  display:flex;
+  height: 35px;
   flex: 1;
   padding: 0.5rem 1rem; 
   border-radius: 9999px; 
   background-color: var(--bg-white);
   font-size: 0.875rem; 
   color: var(--text-primary);
-  outline: none;
   border: none;
-  transition: ring 0.2s ease-in-out;
+  
 }
 
 .message-input:focus {

@@ -1,13 +1,11 @@
 import React, { useContext, useEffect } from 'react'
 import Chat from '../../Component/Chat/Chat'
 import NewMessageForm from '../../Component/NewMessageForm/NewMessageForm'
-import { IoIosBody, IoIosBackspace } from "react-icons/io";
-import Swal from 'sweetalert2'
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { MessagesContext } from '../../Context/MessagesContext';
 import LoaderSpinner from '../../Component/LoaderSpinner/LoaderSpinner';
 import "../../styles/styles.css"
- import { Phone, Video, MoreVertical, Search, Contact} from 'lucide-react';
+ import { Phone, Video, MoreVertical, UserPen, ChevronLeft} from 'lucide-react';
  import { ContactContext } from '../../Context/ContactContext';
 
  
@@ -18,7 +16,7 @@ export default function HomeScreen() {
     const {loadMessages, isMessagesLoading} = useContext(MessagesContext)
     const {contacts} = useContext(ContactContext)
 
-  useEffect(
+    useEffect(
         () => {
             loadMessages(contact_id)
         },
@@ -28,34 +26,33 @@ export default function HomeScreen() {
     if(isMessagesLoading){
         return <LoaderSpinner/>
     }
-    const handleClickAlertButton = () => {
-		Swal.fire({
-			title: 'Error!',
-			text: 'Do you want to continue',
-			icon: 'error',
-			confirmButtonText: 'Cool'
-		})
-	}
-  // Encuentra el contacto específico
-  const foundContact = contacts.find(contact => contact.id === Number(contact_id));
+
+    // Encuentra el contacto específico
+    const foundContact = contacts.find(contact => contact.id === Number(contact_id));
 
     return (
         <div>
            <div className="right-panel">
                 <header className="panel-header">
-                    <div className="chat-header-info">
+                    <nav className="chat-header-info">
+                        <Link to={`/contacts`}>
+                            <ChevronLeft  className="header-icon" />
+                        </Link>
+                        
                         <img src={foundContact.img} alt="" className="header-avatar" />
                         <div>
                             <p className="chat-header-name">{foundContact.name}</p>
                             
                         </div>
-                    </div>
-                     <div className="header-icons">
-                        <Video size={24} className="header-icon" />
-                        <Phone size={24} className="header-icon" />
-                        <Search size={24} className="header-icon" />
-                        <MoreVertical size={24} className="header-icon" />
-                    </div> 
+                    </nav>
+                     <nav className="header-icons">
+                        <Video  className="header-icon" />
+                        <Phone className="header-icon" />
+                        <Link to={`/contact-detail/${contact_id}/detail`}>
+                        < UserPen className="header-icon" />
+                        </Link>
+                        <MoreVertical className="header-icon" />
+                    </nav> 
                 </header>
                 <div className="message-area">
                    <Chat />       
