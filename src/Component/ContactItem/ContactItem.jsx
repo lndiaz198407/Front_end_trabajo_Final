@@ -2,16 +2,34 @@ import React from "react"
 import { Link} from "react-router"
 import "../../styles/styles.css"
 const ContactItem = ({name, id, last_time_connected, img, last_message, unread_messages}) => {
-    
+    let statusChek = '✔✔'
+    const className= {
+        chatCheckStatus : 'check-status',
+        unreadMessages : 'chat-unreadMessage',
+    }
+    if (last_message.status === 'visto'){
+        className.chatCheckStatus = className.chatCheckStatus + '--blue'
+        className.unreadMessages= className.unreadMessages + '--visto'
+    }
+
     return (
         <Link to={`/contacts/${id}/messages`}>
             {/* <a href="/home"> */}{/* el elemento <a></a> Recarga la pagina */}
             <div className="chat-item">
                 <div className="chat-item-header">
-                    <img src={img} alt={`${name} image profile`} className="header-avatar"/>  
-                    <span className="chat-item-name">
+                    <div>   
+                      <img src={img} alt={`${name} image profile`} className="header-avatar"/>    
+                    </div>
+                    
+                    <div className="chat-item-content-name">
+                        <span className="chat-item-name">
                             {name}
-                    </span>
+                        </span>
+                        <span className="chat-item-message">
+                          <div className={className.chatCheckStatus}>{statusChek}</div>   {last_message.text}
+                        </span>  
+                    </div>
+                    
                 </div>
                 
                 <div className="chat-item-content">
@@ -19,10 +37,8 @@ const ContactItem = ({name, id, last_time_connected, img, last_message, unread_m
                             {last_time_connected}
                         </span>
                     <div className="chat-item-info">
-                        <span className="chat-item-message">
-                            {last_message.text}
-                        </span>
-                        <span >
+                        
+                        <span className={className.unreadMessages}>
                             {unread_messages}
                         </span>
                     </div>

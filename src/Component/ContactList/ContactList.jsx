@@ -2,12 +2,13 @@ import React, { useContext } from "react"
 import ContactItem from "../ContactItem/ContactItem"
 import { ContactContext } from "../../Context/ContactContext"
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner"
-import { MessageSquarePlus, MoreVertical} from 'lucide-react';
+import { MessageSquarePlus, MoreVertical, Search} from 'lucide-react';
 import "../../styles/styles.css"
+import SearchName from "../search/SearchName";
 
 
 const ContactsList = () => {
-    const {contacts, isLoadingContacts} = useContext(ContactContext)
+    const {filteredChats, isLoadingContacts} = useContext(ContactContext)
     if(isLoadingContacts){
         return (
             <LoaderSpinner/>
@@ -23,20 +24,19 @@ const ContactsList = () => {
                                             alt="User Avatar"
                                             className="header-avatar"
                                         />
+                                        <SearchName/>
                                         <div className="header-icons">
                                             <MessageSquarePlus  className="header-icon" />
                                             <MoreVertical  className="header-icon" />
                                         </div>
-                                      
-                                        
-                
-
 
                                     </div>
+                                    {/* Search Bar */}
+                          
                             
                                     <div className="chat-list">
                                         {
-                                            contacts.map(
+                                            filteredChats.map(
                                                 (contact) => {
                                                 return <ContactItem
                                                             key={contact.id}
@@ -46,6 +46,7 @@ const ContactsList = () => {
                                                             img={contact.img}
                                                             last_message={contact.last_message}
                                                             unread_messages={contact.unread_messages}
+                                                          
                                                             />
 
                                                 }

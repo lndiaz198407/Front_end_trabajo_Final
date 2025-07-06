@@ -7,7 +7,8 @@ const mook_data = {
             img: "https://image.ondacero.es/clipping/cmsimages01/2023/06/13/D2A4CC75-E672-4A54-B325-1611051ED976/messi-principio-ire-proximo-mundial_104.jpg?crop=715,715,x182,y0&width=1200&height=1200&optimize=low&format=webply", // Reemplaza con la URL de la imagen de Messi
             last_message: {
                 id: 1,
-                text: 'Gracias por el apoyo de siempre, ¡vamos por más! Siempre es lindo sentir el cariño de la gente.'
+                text: 'Gracias por el apoyo de siempre, ¡vamos por más! Siempre es lindo sentir el cariño de la gente.',
+                status:'no visto'
             },
             unread_messages: 1,
             messages: [
@@ -62,7 +63,8 @@ const mook_data = {
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCLCz-HzAec680KhPOd47EZ7YANB7JitTKIQ&s",
             last_message: {
                 id: 1,
-                text: '¡Siempre preparado para lo que venga, patrón! La humildad es la clave.'
+                text: '¡Siempre preparado para lo que venga, patrón! La humildad es la clave.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -117,7 +119,8 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/45320-1700648952.jpg?lm=1", // Reemplaza con la URL de la imagen de Di María
             last_message: {
                 id: 1,
-                text: 'Cada gol es para mi familia y para ustedes. Su apoyo es mi mayor motivación.'
+                text: 'Cada gol es para mi familia y para ustedes. Su apoyo es mi mayor motivación.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -172,7 +175,8 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/576024-1684920938.jpg?lm=1", // Reemplaza con la URL de la imagen de Julián Álvarez
             last_message: {
                 id: 1,
-                text: '¡A seguir trabajando duro para lo que viene! Siempre pensando en el equipo.'
+                text: '¡A seguir trabajando duro para lo que viene! Siempre pensando en el equipo.',
+                status: 'no-visto'
             },
             unread_messages: 1,
             messages: [
@@ -227,7 +231,8 @@ const mook_data = {
             img: "https://www.paparazzi.com.ar/wp-content/uploads/2024/08/rodrigo-de-paul.jpg.webp", // Reemplaza con la URL de la imagen de Rodrigo De Paul
             last_message: {
                 id: 1,
-                text: 'La Scaloneta es una familia, y eso se ve en la cancha. Es una bendición ser parte.'
+                text: 'La Scaloneta es una familia, y eso se ve en la cancha. Es una bendición ser parte.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -282,7 +287,8 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/534033-1669835342.jpg?lm=1", 
             last_message: {
                 id: 1,
-                text: 'Feliz de poder representar a mi país. Es un orgullo inmenso.'
+                text: 'Feliz de poder representar a mi país. Es un orgullo inmenso.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -337,7 +343,8 @@ const mook_data = {
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgm_d5G3HmDGMlwvGYuwgDLsX0FHSodtI-kQ&s", 
             last_message: {
                 id: 1,
-                text: 'Lo importante es el equipo y seguir creciendo día a día. No hay que conformarse nunca.'
+                text: 'Lo importante es el equipo y seguir creciendo día a día. No hay que conformarse nunca.',
+                status: 'no-visto'
             },
             unread_messages: 1,
             messages: [
@@ -392,7 +399,8 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/648195-1669894717.jpg?lm=1", 
             last_message: {
                 id: 1,
-                text: 'Siempre dando lo máximo en cada pelota. Estoy agradecido por cada oportunidad.'
+                text: 'Siempre dando lo máximo en cada pelota. Estoy agradecido por cada oportunidad.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -447,7 +455,8 @@ const mook_data = {
             img: "https://upload.wikimedia.org/wikipedia/commons/8/80/Lautaro_Martinez_2025.jpg", // Reemplaza con la URL de la imagen de Lautaro Martínez
             last_message: {
                 id: 1,
-                text: 'A seguir sumando para el equipo. La revancha siempre llega si uno trabaja.'
+                text: 'A seguir sumando para el equipo. La revancha siempre llega si uno trabaja.',
+                status: 'no-visto'
             },
             unread_messages: 1,
             messages: [
@@ -502,7 +511,8 @@ const mook_data = {
             img: "https://www.bitbol.co/files/image/95/95865/66b17125e00bc_360_480!.webp?s=3a9bec0f64ecdf5f43712cba9930dbe6&d=1722904989&oe=jpg", 
             last_message: {
                 id: 1,
-                text: 'Contento de defender la camiseta y dejarlo todo en cada partido.'
+                text: 'Contento de defender la camiseta y dejarlo todo en cada partido.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -557,7 +567,8 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/54781-1669835534.jpg?lm=1", 
             last_message: {
                 id: 1,
-                text: 'La experiencia sirve para aportar al grupo. Y el cariño de la gente es impagable.'
+                text: 'La experiencia sirve para aportar al grupo. Y el cariño de la gente es impagable.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -612,7 +623,8 @@ const mook_data = {
             img: "https://canalshowsport.com.ar/wp-content/uploads/2024/12/leandro-_-paredes.jpg", 
             last_message: {
                 id: 1,
-                text: 'Siempre concentrados y con el objetivo claro. Cada día es una nueva oportunidad.'
+                text: 'Siempre concentrados y con el objetivo claro. Cada día es una nueva oportunidad.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [
@@ -667,7 +679,8 @@ const mook_data = {
             img: "https://www.directvsports.com/__export/1675283844057/sites/dsports/img/2023/02/01/20230201_053723883_bc8bcde5-878c-4bb3-b20f-f2d6775044d2.jpg_1301049368.jpg", 
             last_message: {
                 id: 1,
-                text: 'A seguir mejorando en cada entrenamiento y aportar lo que el DT pida.'
+                text: 'A seguir mejorando en cada entrenamiento y aportar lo que el DT pida.',
+                status: 'visto'
             },
             unread_messages: 0,
             messages: [

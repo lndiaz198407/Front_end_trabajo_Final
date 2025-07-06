@@ -5,7 +5,10 @@ import { getContactList } from "../services/contactService";
 
 export const ContactContext = createContext({
     contacts: [],
-    isLoadingContacts: true
+    isLoadingContacts: true,
+    searchTerm: '',
+   setSearchTerm: () => {},
+    filteredChats: [],
 })
 
 const ContactContextProvider = ({children}) => {
@@ -14,6 +17,12 @@ const ContactContextProvider = ({children}) => {
         [] //Empieza vacio
     )
     const [isLoadingContacts, setIsLoadingContacts] = useState(true)
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const filteredChats = contacts.filter(contacts =>
+    contacts.name.toLowerCase().includes(searchTerm.toLowerCase()) 
+);
 
     //En una aplicacion real una consulta lleva tiempo en resolverse
     //setTimeout recibe 2 parametros, una callback con la accion a ejecutar y un tiempo de espera en milisegundos
@@ -34,7 +43,10 @@ const ContactContextProvider = ({children}) => {
             value={
                 {
                     contacts: contacts,
-                    isLoadingContacts: isLoadingContacts
+                    isLoadingContacts: isLoadingContacts,
+                    searchTerm:searchTerm,
+                    setSearchTerm:setSearchTerm,
+                    filteredChats: filteredChats
                 }
             }
         >
