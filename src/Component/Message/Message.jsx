@@ -3,6 +3,7 @@ import { MessagesContext } from '../../Context/MessagesContext'
 import { Trash2} from 'lucide-react';
 export default function Message({ emisor, hora, id, texto}) {
 
+    
     const {handleEliminarMensaje} = useContext(MessagesContext)
 
     const classNames = {

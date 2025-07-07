@@ -148,21 +148,21 @@
 
 .search-icon {
   position: absolute;
-  left: 0.75rem; /* left-3 */
+  left: 0.75rem; 
   top: 50%;
-  transform: translateY(-50%); /* -translate-y-1/2 */
-  color: #9ca3af; /* text-gray-400 */
+  transform: translateY(-50%);
+  color: #9ca3af; 
 }
 
 .search-input {
   width: 100%;
-  padding-left: 2.5rem; /* pl-10 */
-  padding-right: 1rem; /* pr-4 */
-  padding-top: 0.5rem; /* py-2 */
-  padding-bottom: 0.5rem; /* py-2 */
-  border-radius: 9999px; /* rounded-full */
+  padding-left: 2.5rem; 
+  padding-right: 1rem; 
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem; 
+  border-radius: 9999px; 
   background-color: var(--bg-white);
-  font-size: 0.875rem; /* text-sm */
+  font-size: 0.875rem; 
   color: var(--text-primary);
   outline: none;
   border: none;
@@ -312,8 +312,6 @@ border-radius:99px;
 }
 
 
-
-
 .input-icon {
   color: var(--text-secondary);
   cursor: pointer;
@@ -356,17 +354,140 @@ border-radius:99px;
 .send-button:hover {
   background-color: var(--whatsapp-green-dark);
 }
+/* detail contact */
 
 
+.profile-main-container {
+  height: 100vh;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem; /* py-4 */
+  /* Asegura que el contenido no exceda el ancho máximo para pantallas muy grandes,
+     manteniendo el diseño centrado y legible hasta 2000px */
+  max-width: 2000px; /* Limita el ancho máximo del contenedor principal */
+  margin-left: auto; /* Centra el contenedor */
+  margin-right: auto; /* Centra el contenedor */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible hasta el max-width */
+}
+/* Contenedor de la tarjeta de perfil */
+/* Se adapta al 100% del ancho en móviles y tiene un ancho máximo en pantallas más grandes */
+.profile-card-wrapper {
+  width: 100%;
+  max-width: 2000px; 
+  background-color: #ffffff; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 0.75rem; 
+  overflow: hidden;
+}
 
+.header-bar {
+  background-color: #059669; 
+  padding: 1rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  color: #ffffff; 
+}
 
+/* Iconos del encabezado */
+.header-icon {
+  width: 30px; 
+  height: 30px; 
+  cursor: pointer;
+  /* Asegura que los iconos no se escalen de forma extraña */
+  flex-shrink: 0;
+}
 
-/* Orientación horizontal para dispositivos móviles */
-@media (max-width: 500px) {
+/* Sección de información del perfil */
+.profile-info-section {
+  background-color: #059669; 
+  padding-top: 10px; 
+  padding-bottom: 35px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor de la imagen de perfil */
+.profile-picture-container {
+  width: 8rem; 
+  height: 8rem; 
+  border-radius: 9999px; 
+  overflow: hidden;
  
-.chat-item-message {
-min-width: 0;
-overflow: hidden;
-text-overflow:unset;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  /* Asegura que la imagen no se deforme en pantallas pequeñas */
+  flex-shrink: 0;
 }
+
+.profile-picture-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
+
+/* Nombre del perfil */
+.profile-name {
+  margin-top: 1rem; /* mt-4 */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  color: #ffffff; /* text-white */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+
+/* Sección de botones de acción */
+.action-buttons-section {
+  background-color: #059669; 
+  padding-bottom: 1.5rem; /* pb-6 */
+  padding-top: 1rem; /* pt-4 */
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  /* Permite que los botones se envuelvan en pantallas muy estrechas si es necesario,
+     aunque 'space-around' ya maneja bien la distribución */
+  flex-wrap: wrap;
+}
+/* Elemento individual del botón de acción */
+.action-button-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff; 
+  /* Añade un poco de margen entre los botones si se envuelven */
+  margin: 0.5rem;
+}
+/* Envoltorio del icono del botón de acción */
+.action-button-icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding: 0.75rem; 
+  border-radius: 9999px; 
+  margin-bottom: 0.25rem; 
+  flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+/* Sección de elementos de la lista */
+.list-items-section {
+  background-color: #ffffff; 
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem; 
+ 
+}
+
+/* Elemento individual de la lista */
+.list-item {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem; 
+  padding-bottom: 0.75rem; 
+  border-bottom-width: 1px; 
+  border-color: #e5e7eb; 
+  gap: 10px;
+}
+
