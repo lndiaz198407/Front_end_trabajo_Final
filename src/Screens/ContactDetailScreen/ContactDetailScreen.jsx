@@ -2,8 +2,8 @@ import React, { useContext }  from 'react'
 import "../../styles/styles.css"
 import { Link, useParams } from 'react-router'
 import { ContactContext } from '../../Context/ContactContext';
- import {ArrowLeft , MoreVertical , Phone, Video, Search, Bell , EyeOff, Bookmark, Lock } from 'lucide-react';
-
+import {ArrowLeft , MoreVertical , Phone, Video, Search, Bell , EyeOff, Bookmark, Lock } from 'lucide-react';
+import { getContactById } from '../../services/contactService';
 
 export default function ContactDetailScreen() {
 const {contact_id} = useParams()
@@ -13,7 +13,7 @@ const {contacts} = useContext(ContactContext)
 
 
 // Encuentra el contacto específico
-  const foundContact = contacts.find(contact => contact.id === Number(contact_id));
+const foundContact = getContactById(contacts, contact_id);
 
 
 

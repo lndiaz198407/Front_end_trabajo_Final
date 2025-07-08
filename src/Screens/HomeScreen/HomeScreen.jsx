@@ -7,6 +7,7 @@ import LoaderSpinner from '../../Component/LoaderSpinner/LoaderSpinner';
 import "../../styles/styles.css"
 import { Phone, Video, MoreVertical, UserPen, ChevronLeft} from 'lucide-react';
 import { ContactContext } from '../../Context/ContactContext';
+import { getContactById } from '../../services/contactService';
 
  // componente que realiza la carga del HTML de los mensajes 
 export default function HomeScreen() {
@@ -28,7 +29,7 @@ export default function HomeScreen() {
     }
 
     // Encuentra el contacto específico
-    const foundContact = contacts.find(contact => contact.id === Number(contact_id));
+     const foundContact = getContactById(contacts, contact_id);
 
     return (
         <div>
