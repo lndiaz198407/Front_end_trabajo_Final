@@ -7,7 +7,7 @@ export const ContactContext = createContext({
     contacts: [],
     isLoadingContacts: true,
     searchTerm: '',
-   setSearchTerm: () => {},
+    setSearchTerm: () => {},
     filteredChats: [],
 })
 
@@ -18,14 +18,14 @@ const ContactContextProvider = ({children}) => {
     )
     const [isLoadingContacts, setIsLoadingContacts] = useState(true)
 
+    // Estado em el que se cargar el parametro de busqueda
     const [searchTerm, setSearchTerm] = useState('');
-
+   // Realiza un filtro deauerdo al parametro 
     const filteredChats = contacts.filter(contacts =>
     contacts.name.toLowerCase().includes(searchTerm.toLowerCase()) 
 );
 
-    //En una aplicacion real una consulta lleva tiempo en resolverse
-    //setTimeout recibe 2 parametros, una callback con la accion a ejecutar y un tiempo de espera en milisegundos
+    //En una aplicacion real una consulta lleva tiempo en resolverse//setTimeout recibe 2 parametros, una callback con la accion a ejecutar y un tiempo de espera en milisegundos
 
     setTimeout(
         () => {

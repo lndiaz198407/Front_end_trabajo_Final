@@ -5,10 +5,10 @@ import { Link, useParams } from 'react-router';
 import { MessagesContext } from '../../Context/MessagesContext';
 import LoaderSpinner from '../../Component/LoaderSpinner/LoaderSpinner';
 import "../../styles/styles.css"
- import { Phone, Video, MoreVertical, UserPen, ChevronLeft} from 'lucide-react';
- import { ContactContext } from '../../Context/ContactContext';
+import { Phone, Video, MoreVertical, UserPen, ChevronLeft} from 'lucide-react';
+import { ContactContext } from '../../Context/ContactContext';
 
- 
+ // componente que realiza la carga del HTML de los mensajes 
 export default function HomeScreen() {
 
     //Capturamos el valor de id de contacto de la URL usando la funcion useParams
@@ -32,14 +32,16 @@ export default function HomeScreen() {
 
     return (
         <div>
-           <div className="right-panel">
+           <div className="panel-messages">
                 <header className="panel-header">
                     <nav className="chat-header-info">
                         <Link to={`/contacts`}>
                             <ChevronLeft  className="header-icon" />
                         </Link>
+                         <Link to={`/contact-detail/${contact_id}/detail`}>
+                            <img src={foundContact.img} alt="" className="header-avatar" />
+                         </Link>
                         
-                        <img src={foundContact.img} alt="" className="header-avatar" />
                         <div>
                             <p className="chat-header-name">{foundContact.name}</p>
                             

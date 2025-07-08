@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import Message from '../Message/Message'
 import { MessagesContext } from '../../Context/MessagesContext'
 import '../../styles/styles.css'
+
+
+/* Componente para el mapeo y carga de mensages */
 export default function Chat() {
     const {messages} = useContext(MessagesContext)
     if(messages.length === 0){

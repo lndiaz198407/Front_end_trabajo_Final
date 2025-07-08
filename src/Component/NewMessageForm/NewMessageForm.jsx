@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { MessagesContext } from '../../Context/MessagesContext'
 import "../../styles/styles.css"
 import { Smile, Paperclip, Send } from 'lucide-react';
+
+/* Componente para la carga de nuevos mensajes  */
 export default function NewMessageForm() {
-    /* const result = useContext(MessagesContext)
-    alert(result.dato) */
+    
     const {addNewMessage} = useContext(MessagesContext)
     const handleSubmitNewMessage = (e) => {
         //Esta funcion se encarga de manejar el envio del formulario

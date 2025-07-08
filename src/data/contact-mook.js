@@ -45,15 +45,9 @@ const mook_data = {
                     hora: '21:10',
                     id: 5,
                     texto: 'Eso se percibe, la química entre ustedes es única. ¿Algún mensaje para los hinchas que los bancan siempre?',
-                    status: 'visto'
-                },
-                {
-                    emisor: 'Lionel Messi',
-                    hora: '21:35',
-                    id: 6,
-                    texto: 'Que sigan así, que su aliento es fundamental. Gracias por el apoyo de siempre, ¡vamos por más! Siempre es lindo sentir el cariño de la gente.',
                     status: 'no-visto'
                 },
+                
             ]
         },
         {
@@ -175,10 +169,10 @@ const mook_data = {
             img: "https://img.a.transfermarkt.technology/portrait/big/576024-1684920938.jpg?lm=1", // Reemplaza con la URL de la imagen de Julián Álvarez
             last_message: {
                 id: 1,
-                text: '¡A seguir trabajando duro para lo que viene! Siempre pensando en el equipo.',
-                status: 'no-visto'
+                text: 'Sos un gran ejemplo para los más jóvenes. ¿Algún consejo para ellos?',
+                status: 'visto'
             },
-            unread_messages: 1,
+            unread_messages: 0,
             messages: [
                 {
                     emisor: 'YO',
@@ -215,13 +209,7 @@ const mook_data = {
                     texto: 'Sos un gran ejemplo para los más jóvenes. ¿Algún consejo para ellos?',
                     status: 'visto'
                 },
-                {
-                    emisor: 'Julián Álvarez',
-                    hora: '21:25',
-                    id: 6,
-                    texto: 'Que trabajen, que disfruten y que nunca bajen los brazos. Con esfuerzo y sacrificio todo es posible. ¡A seguir trabajando duro para lo que viene! Siempre pensando en el equipo.',
-                    status: 'no-visto'
-                },
+
             ]
         },
         {
@@ -232,9 +220,9 @@ const mook_data = {
             last_message: {
                 id: 1,
                 text: 'La Scaloneta es una familia, y eso se ve en la cancha. Es una bendición ser parte.',
-                status: 'visto'
+                status: 'no-visto'
             },
-            unread_messages: 0,
+            unread_messages: 2,
             messages: [
                 {
                     emisor: 'YO',
@@ -265,17 +253,10 @@ const mook_data = {
                     status: 'visto'
                 },
                 {
-                    emisor: 'YO',
-                    hora: '20:35',
-                    id: 5,
-                    texto: 'Se nota la unión que tienen. ¿Cuál es el secreto de la Scaloneta?',
-                    status: 'visto'
-                },
-                {
                     emisor: 'Rodrigo De Paul',
                     hora: '20:50',
                     id: 6,
-                    texto: 'No hay secretos, YO. Es trabajo, humildad y un grupo que se quiere de verdad. La Scaloneta es una familia, y eso se ve en la cancha. Es una bendición ser parte.',
+                    texto: 'No hay secretos. Es trabajo, humildad y un grupo que se quiere de verdad. La Scaloneta es una familia, y eso se ve en la cancha. Es una bendición ser parte.',
                     status: 'visto'
                 },
             ]
@@ -288,9 +269,9 @@ const mook_data = {
             last_message: {
                 id: 1,
                 text: 'Feliz de poder representar a mi país. Es un orgullo inmenso.',
-                status: 'visto'
+                status: 'no-visto'
             },
-            unread_messages: 0,
+            unread_messages: 1,
             messages: [
                 {
                     emisor: 'YO',
@@ -332,7 +313,7 @@ const mook_data = {
                     hora: '20:40',
                     id: 6,
                     texto: 'Admiro a muchos mediocampistas, siempre trato de aprender de los mejores. Feliz de poder representar a mi país. Es un orgullo inmenso.',
-                    status: 'visto'
+                    status: 'no-visto'
                 },
             ]
         },

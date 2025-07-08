@@ -17,7 +17,7 @@ const ContactsList = () => {
     return (
             
                 <div className="whatsapp-container">
-                            <div className="left-panel">
+                            <div className="panel-contacts">
                                     <div className="panel-header">
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
