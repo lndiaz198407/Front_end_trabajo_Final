@@ -234,6 +234,8 @@
 
     .message-area {
       flex: 1;
+      padding-left: 10px;
+      padding-right: 10px;
       margin-top: 64px; 
       overflow-y: auto; 
       display: flex;
@@ -268,6 +270,7 @@
     .message-delete:hover {
       color: var(--text-primary);
       border-radius:99px;
+      cursor: pointer;
 
     }
     .message-text {
@@ -497,4 +500,6 @@
     border-color: #e5e7eb; 
     gap: 10px;
   }
+
+  
 
