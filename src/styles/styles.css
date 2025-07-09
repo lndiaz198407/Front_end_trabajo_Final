@@ -195,9 +195,12 @@
 
     .chat-header-info {
       display: flex;
+      flex-direction:row;
       align-items: center;
       gap: 20px;
     }
+    
+    
     .header-avatar  {
       min-width: 45;
       width: 45px;
@@ -534,6 +537,9 @@
      .chat-header-info {
         gap: 2px;
     }
+
+    
+
 
     /* Ajustes para la barra de búsqueda */
     .search-input {

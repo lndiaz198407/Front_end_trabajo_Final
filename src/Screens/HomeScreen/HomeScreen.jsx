@@ -15,11 +15,12 @@ export default function HomeScreen() {
     //Capturamos el valor de id de contacto de la URL usando la funcion useParams
     const {contact_id} = useParams()
     const {loadMessages, isMessagesLoading} = useContext(MessagesContext)
-    const {contacts} = useContext(ContactContext)
+    const {contacts, markMessagesAsRead} = useContext(ContactContext)
 
     useEffect(
         () => {
-            loadMessages(contact_id)
+            loadMessages(contact_id);
+            markMessagesAsRead (contact_id);
         },
         [contact_id]
     )
@@ -40,13 +41,15 @@ export default function HomeScreen() {
                             <ChevronLeft  className="header-icon" />
                         </Link>
                          <Link to={`/contact-detail/${contact_id}/detail`}>
-                            <img src={foundContact.img} alt="" className="header-avatar" />
-                         </Link>
-                        
-                        <div>
-                            <p className="chat-header-name">{foundContact.name}</p>
+                            <div className="chat-header-info">
+                                <img src={foundContact.img} alt="" className="header-avatar" />
                             
-                        </div>
+                                <p className="chat-header-name">{foundContact.name}</p>
+                                
+                            </div>
+                        </Link>
+
+                        
                     </nav>
                      <nav className="header-icons">
                         <Video  className="header-icon" />

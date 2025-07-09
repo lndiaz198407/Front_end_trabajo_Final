@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { getContactList } from "../services/contactService";
 
 
@@ -9,6 +9,7 @@ export const ContactContext = createContext({
     searchTerm: '',
     setSearchTerm: () => {},
     filteredChats: [],
+    markMessagesAsRead: (contact_id) => {}
 })
 
 const ContactContextProvider = ({children}) => {
@@ -25,17 +26,41 @@ const ContactContextProvider = ({children}) => {
     contacts.name.toLowerCase().includes(searchTerm.toLowerCase()) 
 );
 
-    //En una aplicacion real una consulta lleva tiempo en resolverse//setTimeout recibe 2 parametros, una callback con la accion a ejecutar y un tiempo de espera en milisegundos
+ // Función para marcar los mensajes de un contacto específico como leídos
+    const markMessagesAsRead = (contactIdToMark) => {
+        setContacts(prevContacts => {
+            return prevContacts.map(contact => {
+                if (contact.id === Number(contactIdToMark)) {
+                    return {
+                        ...contact,
+                        unread_messages: 0, // Establecemos los mensajes no leídos a 0
+                        last_message: {
+                            ...contact.last_message,
+                            status: 'visto'
+                        }                  
+                    };
+                }
+                return contact;
+            });
+        });
+    };
 
-    setTimeout(
-        () => {
-            //a los 2 segundos cargamos la lista de contactos
-            const contact_list = getContactList() //Obtengo la lista de contactos
-            setContacts(contact_list)
-            setIsLoadingContacts(false)
-        }, 
-        2000
-    )
+
+    
+
+
+ // Uso useEffect para cargar los contactos cada vez que haya un cambio
+    useEffect(() => {
+        setIsLoadingContacts(true); 
+        setTimeout(
+            () => {
+                const contact_list = getContactList(); // Obtengo la lista de contactos
+                setContacts(contact_list);
+                setIsLoadingContacts(false);
+            },
+            2000
+        );
+    }, []);
 
 
     return (
@@ -46,7 +71,8 @@ const ContactContextProvider = ({children}) => {
                     isLoadingContacts: isLoadingContacts,
                     searchTerm:searchTerm,
                     setSearchTerm:setSearchTerm,
-                    filteredChats: filteredChats
+                    filteredChats: filteredChats,
+                    markMessagesAsRead: markMessagesAsRead
                 }
             }
         >
