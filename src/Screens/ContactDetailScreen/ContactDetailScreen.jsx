@@ -26,10 +26,7 @@ const foundContact = getContactById(contacts, contact_id);
           <Link to={`/contacts/${contact_id}/messages`}>
           <ArrowLeft className="header-icon" />
           </Link>
-          
-          <div >
-          
-          </div>
+      
           <MoreVertical className="header-icon" />
         </header>
        
@@ -62,9 +59,9 @@ const foundContact = getContactById(contacts, contact_id);
             <span className="action-button-text">Buscar</span>
           </div>
         </section>
-        {/* Sección de elementos de la lista */}
+     
         <section className="list-items-section">
-          {/* Notificaciones */}
+        
           <div className="list-item">
             <Bell className="list-item-icon" />
             <div className="list-item-content">
@@ -72,7 +69,7 @@ const foundContact = getContactById(contacts, contact_id);
             </div>
           </div>
 
-          {/* Visibilidad de archivos multimedia */}
+         
           <div className="list-item">
             <EyeOff className="list-item-icon" />
             <div className="list-item-content">
@@ -81,7 +78,7 @@ const foundContact = getContactById(contacts, contact_id);
             </div>
           </div>
 
-          {/* Mensajes conservados */}
+        
           <div className="list-item">
             <Bookmark className="list-item-icon" />
             <div className="list-item-content">
@@ -89,11 +86,11 @@ const foundContact = getContactById(contacts, contact_id);
             </div>
           </div> 
 
-          {/* Cifrado */}
-          <div className="list-item list-item-start-align">
-            <Lock className="list-item-icon list-item-icon-top-margin" />
+         
+          <div className="list-item ">
+            <Lock className="list-item-icon" />
             <div className="list-item-content">
-              <p className="list-item-title">Cifrado</p>
+              <p className="list-item-title" >Cifrado</p>
               <p className="list-item-subtitle">Los mensajes y las llamadas están cifrados de extremo a extremo. Toca para verificarlo</p>
             </div>
           </div>

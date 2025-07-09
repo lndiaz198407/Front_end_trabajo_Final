@@ -471,13 +471,24 @@
     color: var(--chat-bg-pattern);
     margin: 8px; 
   }
-  /* Envoltorio del icono del botón de acción */
+  
   .action-button-icon-wrapper {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 12px; 
     border-radius: 9999px;
     margin-bottom: 4px; 
     flex-shrink: 0;
+  }
+ 
+  .action-button-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .action-button-text {
+    font-size: 15px; 
+    text-align: center;
   }
 
 /* Sección de elementos de la lista */
@@ -490,6 +501,14 @@
     padding-right: 24px; 
 
   }
+  /* Icono del elemento de la lista */
+  .list-item-icon {
+    width: 20px;
+    height: 20px;
+    color: #6b7280;
+    margin-right: 16px; 
+    flex-shrink: 0;
+  }
 
   /* Elemento individual de la lista */
   .list-item {
@@ -498,9 +517,22 @@
     padding-top: 12px; 
     padding-bottom: 12px; 
     border-bottom-width: 1px;
-    border-color: #e5e7eb;
     gap: 10px;
   }
+
+  /* Título del elemento de la lista */
+.list-item-title {
+  color:var(--text-primary); 
+  font-size: 16px; 
+  margin: 0; 
+}
+
+/* Subtítulo del elemento de la lista */
+.list-item-subtitle {
+  color: var(--text-secondary); 
+  font-size: 15px; 
+  margin: 0; 
+}
 
 @media (max-width: 400px) {
 

@@ -18,7 +18,7 @@ const ContactsList = () => {
             
                 <div className="whatsapp-container">
                             <div className="panel-contacts">
-                                    <div className="panel-header">
+                                    <header className="panel-header">
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
                                             alt="User Avatar"
@@ -30,7 +30,7 @@ const ContactsList = () => {
                                             <MoreVertical  className="header-icon" />
                                         </div>
 
-                                    </div>
+                                    </header>
                                     {/* Search Bar */}
                           
                             
